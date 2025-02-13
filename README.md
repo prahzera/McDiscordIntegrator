@@ -12,11 +12,13 @@ Este es un plugin de Bukkit 1.21.4 que envía todos los mensajes del chat y even
 ```plaintext
 <usuario>: <mensaje>
 ```
+Ej.= **prahzera**: hola
 
 ## Formato de las muertes
 ```plaintext
-<usuario> ha muerto en (X, Y, Z)
+<usuario> ha muerto (<Motivo de la muerte Ej. Drowned>) (X, Y, Z)
 ```
+Ej. =  **prahzera** ha muerto (prahzera fell from a high place) en [X: 0, Y: 80, Z: -7]
 
 ## Instalación
 1. Descarga el archivo JAR del plugin.
