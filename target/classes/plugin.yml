@@ -1,0 +1,5 @@
+name: ChatWebhookPlugin
+main: com.ejemplo.chatwebhook.ChatWebhookPlugin
+version: 1.0
+api-version: 1.13
+description: Envía todo el chat a un webhook de Discord.

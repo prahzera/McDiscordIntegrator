@@ -1,0 +1,3 @@
+# Configuración para ChatWebhookPlugin
+# Reemplaza la URL a continuación con la URL de tu webhook de Discord.
+discord-webhook-url: "https://discord.com/api/webhooks/ID/TOKEN"
