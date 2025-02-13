@@ -1,20 +1,26 @@
-# Minecraft Chat to Discord Webhook
+# Discord Integrator 1.0.2
 
-Este es un plugin de Spigot 1.16.5 que envía todos los mensajes del chat de Minecraft a un webhook de Discord.
+Este es un plugin de Bukkit 1.21.4 que envía todos los mensajes del chat y eventos de muerte a un webhook de Discord.
 
 ## Características
 - Captura todos los mensajes del chat.
 - Envía los mensajes formateados al webhook de Discord.
-- Compatible con Spigot 1.16.5.
+- Captura muertes de jugadores y envía las coordenadas donde ocurrieron.
+- Compatible con Bukkit 1.21.4.
 
 ## Formato del mensaje
 ```plaintext
 <usuario>: <mensaje>
 ```
 
+## Formato de las muertes
+```plaintext
+<usuario> ha muerto en (X, Y, Z)
+```
+
 ## Instalación
 1. Descarga el archivo JAR del plugin.
-2. Coloca el archivo en la carpeta `plugins/` de tu servidor Spigot.
+2. Coloca el archivo en la carpeta `plugins/` de tu servidor Bukkit.
 3. Reinicia el servidor.
 4. Se generará un archivo `config.yml` en la carpeta del plugin.
 5. Edita `config.yml` y agrega la URL de tu webhook de Discord.
@@ -26,13 +32,14 @@ webhook-url: "https://discord.com/api/webhooks/tu_webhook"
 ```
 
 ## Uso
-Una vez instalado y configurado, el plugin comenzará a enviar los mensajes del chat de Minecraft al webhook de Discord automáticamente.
+Una vez instalado y configurado, el plugin comenzará a enviar los mensajes del chat y eventos de muerte al webhook de Discord automáticamente.
 
 ## Descarga
-Puedes descargar la última versión del plugin desde [GitHub Releases](https://github.com/tu-repo/minecraft-chat-webhook/releases).
+Puedes descargar la última versión del plugin desde [GitHub Releases](https://github.com/prahzera/McDiscordIntegrator/releases).
 
 ## Versión
-- **1.0** - Versión inicial con funcionalidad básica.
+- **1.0.2** - Soporte para eventos de muerte con coordenadas.
+- **1.0.0** - Soporte para mensajes a discord via webhooks.
 
 ## Licencia
 Este proyecto está bajo la licencia MIT.
