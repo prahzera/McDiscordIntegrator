@@ -1,43 +1,34 @@
-package com.ejemplo.discordcrosschat;// Agrega esta importación:
+package com.ejemplo.discordcrosschat;
 
 import javax.annotation.Nonnull;
-
 import net.dv8tion.jda.api.events.message.MessageReceivedEvent;
 import net.dv8tion.jda.api.hooks.ListenerAdapter;
 import org.bukkit.Bukkit;
+import org.bukkit.ChatColor;
 
 public class DiscordListener extends ListenerAdapter {
     private final DiscordCrossChatPlugin plugin;
-    private final String chatChannelId; // Declarar variable
+    private final String chatChannelId;
 
     public DiscordListener(DiscordCrossChatPlugin plugin) {
         this.plugin = plugin;
-        this.chatChannelId = plugin.getConfig().getString("discord-chat-channel-id"); // Asignar valor
+        this.chatChannelId = plugin.getConfig().getString("discord-chat-channel-id");
     }
 
     @Override
     public void onMessageReceived(@Nonnull MessageReceivedEvent event) {
-        if (event.getAuthor().isBot()) {
-            System.out.println("[DEBUG] Mensaje de bot ignorado");
-            return;
-        }
+        if (event.getAuthor().isBot()) return;
 
         String receivedChannelId = event.getChannel().getId();
-        System.out.println("[DEBUG] ID del canal recibido: " + receivedChannelId);
-        System.out.println("[DEBUG] ID del canal configurado: " + chatChannelId);
-
-        if (!receivedChannelId.equals(chatChannelId)) {
-            System.out.println("[DEBUG] Mensaje ignorado (canal incorrecto)");
-            return;
-        }
+        if (!receivedChannelId.equals(chatChannelId)) return;
 
         String content = event.getMessage().getContentRaw();
-        System.out.println("[DEBUG] Contenido RAW: '" + content + "'");
-        System.out.println("[DEBUG] ¿Tiene adjuntos? " + !event.getMessage().getAttachments().isEmpty());
+        boolean hasAttachments = !event.getMessage().getAttachments().isEmpty();
+        boolean hasEmbeds = !event.getMessage().getEmbeds().isEmpty();
 
         final String finalContent;
-        if (content.isEmpty() && !event.getMessage().getAttachments().isEmpty()) {
-            finalContent = "(Archivo adjunto)";
+        if (content.isEmpty() && (hasAttachments || hasEmbeds)) {
+            finalContent = "(Contenido no textual)";
         } else if (content.isEmpty()) {
             System.out.println("[DEBUG] Mensaje vacío ignorado");
             return;
@@ -45,10 +36,12 @@ public class DiscordListener extends ListenerAdapter {
             finalContent = content;
         }
 
-        // Envía el mensaje a Minecraft
+        String minecraftMessage = ChatColor.BLUE + "[Discord] " 
+                                + ChatColor.WHITE + event.getAuthor().getName() 
+                                + ": " + finalContent;
+
         Bukkit.getScheduler().runTask(plugin, () -> {
-            Bukkit.broadcastMessage("<" + event.getAuthor().getName() + "> " + finalContent);
-            System.out.println("[DEBUG] Mensaje enviado a Minecraft: " + finalContent);
+            Bukkit.broadcastMessage(minecraftMessage);
         });
     }
 }

@@ -1,5 +1,6 @@
 com\ejemplo\discordcrosschat\DiscordListener.class
 com\ejemplo\discordcrosschat\AchievementListener.class
 com\ejemplo\discordcrosschat\DiscordCrossChatPlugin.class
+com\ejemplo\discordcrosschat\GameChatListener$1.class
 com\ejemplo\discordcrosschat\GameChatListener.class
 com\ejemplo\discordcrosschat\DeathListener.class
