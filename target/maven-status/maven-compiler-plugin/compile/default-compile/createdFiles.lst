@@ -1,3 +1,5 @@
-com\ejemplo\chatwebhook\ChatListener.class
-com\ejemplo\chatwebhook\ChatWebhookPlugin.class
-com\ejemplo\chatwebhook\DeathListener.class
+com\ejemplo\discordcrosschat\DiscordListener.class
+com\ejemplo\discordcrosschat\AchievementListener.class
+com\ejemplo\discordcrosschat\DiscordCrossChatPlugin.class
+com\ejemplo\discordcrosschat\GameChatListener.class
+com\ejemplo\discordcrosschat\DeathListener.class

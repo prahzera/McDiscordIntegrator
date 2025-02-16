@@ -1,3 +1,10 @@
-# Configuración para ChatWebhookPlugin
-# Reemplaza la URL a continuación con la URL de tu webhook de Discord.
-discord-webhook-url: "https://discord.com/api/webhooks/ID/TOKEN"
+# Configuración para DiscordCrossChatPlugin
+
+# Token del bot de Discord
+discord-token: "TU_TOKEN_DEL_BOT"
+
+# ID del canal de Discord para el chat cruzado (mensajes generales)
+discord-chat-channel-id: "ID_DEL_CANAL_CHAT"
+
+# ID del canal de Discord para eventos (muertes, asesinatos, logros)
+discord-events-channel-id: "ID_DEL_CANAL_EVENTOS"

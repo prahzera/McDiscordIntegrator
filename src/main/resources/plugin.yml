@@ -1,5 +1,5 @@
-name: ChatWebhookPlugin
-main: com.ejemplo.chatwebhook.ChatWebhookPlugin
+name: DiscordCrossChatPlugin
+main: com.ejemplo.discordcrosschat.DiscordCrossChatPlugin
 version: 1.0
-api-version: 1.13
-description: Envía todo el chat a un webhook de Discord.
+api-version: 1.21
+description: Conexión entre Minecraft y Discord
