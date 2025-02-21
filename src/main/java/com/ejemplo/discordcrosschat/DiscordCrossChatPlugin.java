@@ -3,6 +3,7 @@ package com.ejemplo.discordcrosschat;
 import net.dv8tion.jda.api.JDA;
 import net.dv8tion.jda.api.JDABuilder;
 import net.dv8tion.jda.api.entities.channel.concrete.TextChannel;
+import net.dv8tion.jda.api.interactions.commands.OptionType;
 import net.dv8tion.jda.api.requests.GatewayIntent;
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -30,9 +31,10 @@ public class DiscordCrossChatPlugin extends JavaPlugin {
         }
 
         try {
-            // Inicializa JDA con el intent MESSAGE_CONTENT
+            // Inicializa JDA con los intents necesarios
             jda = JDABuilder.createDefault(token)
-                    .enableIntents(GatewayIntent.MESSAGE_CONTENT) // ¡Agrega esta línea!
+                    .enableIntents(GatewayIntent.GUILD_MESSAGES, GatewayIntent.MESSAGE_CONTENT)
+                    .addEventListeners(new TrackCommand(), new ButtonListener())
                     .build();
             jda.awaitReady();
         } catch (Exception e) {
@@ -58,6 +60,14 @@ public class DiscordCrossChatPlugin extends JavaPlugin {
         getServer().getPluginManager().registerEvents(new GameChatListener(chatChannel), this);
         getServer().getPluginManager().registerEvents(new DeathListener(eventsChannel), this);
         getServer().getPluginManager().registerEvents(new AchievementListener(eventsChannel), this);
+
+        // Registra los comandos slash
+        jda.addEventListener(new ServerStatusCommand());
+        jda.addEventListener(new TrackCommand());
+        jda.upsertCommand("status", "Muestra el estado del servidor").queue();
+        jda.upsertCommand("track", "Rastrea a un jugador")
+                .addOption(OptionType.STRING, "usuario", "Nombre del jugador a rastrear", true)
+                .queue();
 
         getLogger().info("DiscordCrossChatPlugin habilitado correctamente.");
     }

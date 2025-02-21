@@ -1,5 +1,9 @@
 I:\dev\MINECRAFT\crosschatPlugin\src\main\java\com\ejemplo\discordcrosschat\AchievementListener.java
+I:\dev\MINECRAFT\crosschatPlugin\src\main\java\com\ejemplo\discordcrosschat\ButtonListener.java
 I:\dev\MINECRAFT\crosschatPlugin\src\main\java\com\ejemplo\discordcrosschat\DeathListener.java
 I:\dev\MINECRAFT\crosschatPlugin\src\main\java\com\ejemplo\discordcrosschat\DiscordCrossChatPlugin.java
 I:\dev\MINECRAFT\crosschatPlugin\src\main\java\com\ejemplo\discordcrosschat\DiscordListener.java
 I:\dev\MINECRAFT\crosschatPlugin\src\main\java\com\ejemplo\discordcrosschat\GameChatListener.java
+I:\dev\MINECRAFT\crosschatPlugin\src\main\java\com\ejemplo\discordcrosschat\ItemEmojiMapper.java
+I:\dev\MINECRAFT\crosschatPlugin\src\main\java\com\ejemplo\discordcrosschat\ServerStatusCommand.java
+I:\dev\MINECRAFT\crosschatPlugin\src\main\java\com\ejemplo\discordcrosschat\TrackCommand.java

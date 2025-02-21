@@ -29,27 +29,32 @@ public class GameChatListener implements Listener {
 
         // Formatear para Discord (sin códigos de color)
         String discordMessage = String.format(
-            "[%s] %s: %s",
-            dimension,
-            player.getName(),
-            originalMessage
-        );
+                "**[%s]** **%s**: %s", // Nombres en negrita
+                dimension,
+                player.getName(),
+                originalMessage);
         chatChannel.sendMessage(discordMessage).queue();
     }
 
     private String getDimension(World.Environment environment) {
         switch (environment) {
-            case NETHER: return "Nether";
-            case THE_END: return "End";
-            default: return "Overworld";
+            case NETHER:
+                return "Nether";
+            case THE_END:
+                return "End";
+            default:
+                return "Overworld";
         }
     }
 
     private ChatColor getDimensionColor(World.Environment environment) {
         switch (environment) {
-            case NETHER: return ChatColor.RED;
-            case THE_END: return ChatColor.LIGHT_PURPLE;
-            default: return ChatColor.GREEN;
+            case NETHER:
+                return ChatColor.RED;
+            case THE_END:
+                return ChatColor.LIGHT_PURPLE;
+            default:
+                return ChatColor.GREEN;
         }
     }
 }
