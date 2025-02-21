@@ -2,6 +2,10 @@
 
 Este es un plugin de Bukkit 1.21.4 que integra un bot de Discord para enviar y recibir mensajes entre Minecraft y Discord, además de incluir comandos para rastrear jugadores y consultar el estado del servidor.
 
+
+
+
+
 ## Características
 - **Chat cruzado (Cross Chat):** Los mensajes de Minecraft se envían a Discord y viceversa. Los mensajes de Minecraft tienen el formato `[Mundo] Usuario: Mensaje` y los mensajes de Discord aparecen como `[Discord] Usuario: Mensaje`.
   - El mundo de Minecraft se indica con un color específico:
@@ -21,11 +25,11 @@ Los mensajes que provienen de Minecraft tienen el siguiente formato:
 ```
 Ejemplo: **[Overworld] prahzera: holis** 
 Los mensajes enviados desde Discord se muestran así en Minecraft:
-
-
 ```plaintext
 [Discord] <usuario>: <mensaje>
 ```
+![image](https://github.com/user-attachments/assets/ce3cf6d7-5d5b-465a-94e3-5473b6cccf3c)
+
 Comando `/track <usuarioDeMinecraft>`El comando `/track <usuarioDeMinecraft>` permite rastrear el estado del jugador en tiempo real. Los datos mostrados en el embed incluyen: 
 - **Jugador:**  Nombre del jugador.
  
@@ -42,10 +46,15 @@ El embed también incluye dos botones:
 - **Detener Trackeo:**  Para dejar de seguir al jugador.
  
 - **Reiniciar Trackeo:**  Para reiniciar el seguimiento de las estadísticas del jugador.
+  
+![image](https://github.com/user-attachments/assets/1c8b50a5-6bd7-4b1e-aa2c-830477ffe51a)
+
 Comando `/status`El comando `/status` devuelve información sobre el estado del servidor: 
 - **Jugadores Online:**  Muestra la cantidad de jugadores en línea y el máximo de jugadores permitidos.
  
 - **Jugadores Detallados:**  Muestra el tiempo jugado y la ubicación de cada jugador en el servidor.
+
+![image](https://github.com/user-attachments/assets/792007f8-15a6-4ddb-bdca-e97bc0208ad4)
 
 ## Instalación 
 
