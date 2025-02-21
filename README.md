@@ -30,7 +30,8 @@ Los mensajes enviados desde Discord se muestran así en Minecraft:
 ```
 ![image](https://github.com/user-attachments/assets/ce3cf6d7-5d5b-465a-94e3-5473b6cccf3c)
 
-Comando `/track <usuarioDeMinecraft>`El comando `/track <usuarioDeMinecraft>` permite rastrear el estado del jugador en tiempo real. Los datos mostrados en el embed incluyen: 
+## Comando `/track` del bot de discord.
+El comando `/track <nicknameEnMinecraft>` permite rastrear el estado del jugador en tiempo real. Los datos mostrados en el embed incluyen: 
 - **Jugador:**  Nombre del jugador.
  
 - **Coordenadas:**  Ubicación actual en el mundo.
@@ -49,7 +50,8 @@ El embed también incluye dos botones:
   
 ![image](https://github.com/user-attachments/assets/1c8b50a5-6bd7-4b1e-aa2c-830477ffe51a)
 
-Comando `/status`El comando `/status` devuelve información sobre el estado del servidor: 
+## Comando `/status` del bot de discord.
+El comando `/status` devuelve información sobre el estado del servidor: 
 - **Jugadores Online:**  Muestra la cantidad de jugadores en línea y el máximo de jugadores permitidos.
  
 - **Jugadores Detallados:**  Muestra el tiempo jugado y la ubicación de cada jugador en el servidor.
