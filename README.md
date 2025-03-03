@@ -1,4 +1,4 @@
-# Discord Integrator 1.1.7
+# Discord Integrator 1.2.2
 
 Este es un plugin de Bukkit 1.21.4 que integra un bot de Discord para enviar y recibir mensajes entre Minecraft y Discord, además de incluir comandos para rastrear jugadores y consultar el estado del servidor.
 
@@ -37,11 +37,13 @@ Comando `/track <usuarioDeMinecraft>`El comando `/track <usuarioDeMinecraft>` pe
  
 - **Nivel:**  Nivel de experiencia del jugador.
 
-El embed también incluye dos botones:
+El embed también incluye tres botones:
  
 - **Detener Trackeo:**  Para dejar de seguir al jugador.
  
 - **Reiniciar Trackeo:**  Para reiniciar el seguimiento de las estadísticas del jugador.
+ 
+- **Expulsar Jugador:** Para expulsar al jugador del servidor.
 Comando `/status`El comando `/status` devuelve información sobre el estado del servidor: 
 - **Jugadores Online:**  Muestra la cantidad de jugadores en línea y el máximo de jugadores permitidos.
  
@@ -84,6 +86,8 @@ Este comando muestra el estado general del servidor, incluyendo la cantidad de j
 ## Descarga 
 Puedes descargar la última versión del plugin desde [GitHub Releases](https://github.com/prahzera/McDiscordIntegrator/releases) .
 ## Versión 
+ 
+- **1.2.2**  - Añadido botón de expulsión de jugadores en el comando `/track` | Añadido uso de custom emojis de discord en lugar de emojis genericos.
  
 - **1.1.7**  - Integración de bot de Discord, chat cruzado, comandos `/track` y `/status`.
  
