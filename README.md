@@ -10,8 +10,12 @@ Este es un plugin de Bukkit 1.21.4 que integra un bot de Discord para enviar y r
     - **End:** Morado
     - **Discord:** Azul
 - **Tracking de Jugadores:** El comando `/track <usuarioDeMinecraft>` permite rastrear la ubicación, salud, hambre y nivel de un jugador en tiempo real. El comando devuelve un **embed** con los datos del jugador y botones para iniciar o detener el seguimiento.
+  - **Inventario y Armadura:** Muestra el contenido del inventario y la armadura equipada del jugador con emojis personalizados de Discord.
+  - **Efectos de Poción:** Lista todos los efectos activos con su duración y nivel.
+  - **Información Detallada:** Incluye UUID, dirección cardinal, ping, modo de juego, IP, tiempo jugado y fecha de primera conexión.
 - **Estado del Servidor:** El comando `/status` proporciona un resumen del estado del servidor, incluyendo la cantidad de jugadores en línea, su tiempo jugado y ubicación actual.
-- **Bot de Discord:** El plugin ahora utiliza un bot de Discord en lugar de un webhook para enviar los mensajes.
+- **Bot de Discord:** El plugin utiliza un bot de Discord con soporte para emojis personalizados y botones interactivos.
+- **Eventos del Servidor:** Notifica en Discord sobre muertes, logros y otros eventos importantes con coordenadas y detalles específicos.
 
 ## Formato del Chat
 
@@ -49,6 +53,17 @@ Comando `/status`El comando `/status` devuelve información sobre el estado del 
  
 - **Jugadores Detallados:**  Muestra el tiempo jugado y la ubicación de cada jugador en el servidor.
 
+## Requisitos
+
+- Servidor Bukkit/Spigot 1.21.4
+- Java 17 o superior
+- Bot de Discord con los siguientes permisos:
+  - `MESSAGE_CONTENT` - Para leer mensajes
+  - `SEND_MESSAGES` - Para enviar mensajes
+  - `USE_EXTERNAL_EMOJIS` - Para usar emojis personalizados
+  - `EMBED_LINKS` - Para enviar embeds
+  - `ATTACH_FILES` - Para adjuntar archivos
+
 ## Instalación 
 
 1. Descarga el archivo JAR del plugin.
@@ -62,6 +77,8 @@ Comando `/status`El comando `/status` devuelve información sobre el estado del 
 5. Edita `config.yml` y agrega los valores necesarios para el bot de Discord (Token y IDs de los canales).
 
 6. Reinicia el servidor para aplicar los cambios.
+
+7. Opcional: Personaliza los emojis del servidor de Discord para mejorar la visualización de items en los embeds de tracking.
 Configuración (`config.yml`)
 
 ```yaml
