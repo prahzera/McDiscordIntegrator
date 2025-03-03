@@ -87,13 +87,19 @@ Este comando muestra el estado general del servidor, incluyendo la cantidad de j
 Puedes descargar la última versión del plugin desde [GitHub Releases](https://github.com/prahzera/McDiscordIntegrator/releases) .
 ## Versión 
  
-- **1.2.2**  - Añadido botón de expulsión de jugadores en el comando `/track` | Añadido uso de custom emojis de discord en lugar de emojis genericos.
- 
-- **1.1.7**  - Integración de bot de Discord, chat cruzado, comandos `/track` y `/status`.
- 
-- **1.0.2**  - Soporte para eventos de muerte con coordenadas.
- 
-- **1.0.0**  - Soporte para mensajes a Discord vía webhooks.
+- **1.2.2**  
+    - Añadido botón de expulsión de jugadores en el comando `/track`.  
+    - Añadido uso de custom emojis de Discord en lugar de emojis genéricos. 
+
+- **1.1.7**  
+    - Integración de bot de Discord, chat cruzado, comandos `/track` y `/status`.  
+
+- **1.0.2**  
+    - Soporte para eventos de muerte con coordenadas.  
+
+- **1.0.0**  
+    - Soporte para mensajes a Discord vía webhooks.  
+
 
 ## Licencia 
 
