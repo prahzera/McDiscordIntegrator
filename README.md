@@ -63,7 +63,7 @@ Comando `/status`El comando `/status` devuelve información sobre el estado del 
 Configuración (`config.yml`)
 
 ```yaml
-# Configuración para DiscordCrossChatPlugin
+# Configuración para discordintegrator
 
 # Token del bot de Discord
 discord-token: "TU_TOKEN_DEL_BOT"

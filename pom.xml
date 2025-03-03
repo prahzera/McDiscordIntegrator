@@ -2,13 +2,15 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
-
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
     <groupId>com.ejemplo</groupId>
-    <artifactId>DiscordCrossChatPlugin</artifactId>
-    <version>1.0</version>
+    <artifactId>DiscordIntegrator</artifactId>
+    <version>1.2.2</version>
     <packaging>jar</packaging>
 
-    <name>DiscordCrossChatPlugin</name>
+    <name>Discord Integrator 1.2.2</name>
 
     <dependencies>
         <!-- Dependencia de Spigot API -->
@@ -24,6 +26,19 @@
             <groupId>net.dv8tion</groupId>
             <artifactId>JDA</artifactId>
             <version>5.0.0-beta.20</version>
+        </dependency>
+
+        <!-- JSON Library -->
+        <dependency>
+            <groupId>org.json</groupId>
+            <artifactId>json</artifactId>
+            <version>20231013</version>
+        </dependency>
+        <!-- OkHttp Client -->
+        <dependency>
+            <groupId>com.squareup.okhttp3</groupId>
+            <artifactId>okhttp</artifactId>
+            <version>4.12.0</version>
         </dependency>
     </dependencies>
 
