@@ -170,8 +170,11 @@ public class TrackCommand extends ListenerAdapter implements Listener {
         // Inventario.
         PlayerInventory inventory = player.getInventory();
         StringBuilder items = new StringBuilder();
+        int itemCount = 0;
+        int maxItems = 15; // Límite de items a mostrar
+        
         for (ItemStack item : inventory.getContents()) {
-            if (item != null) {
+            if (item != null && itemCount < maxItems) {
                 String itemName = item.getType().name().toLowerCase();
                 String emojiId = plugin.getEmojiMap().get(itemName);
                 String formattedEmoji = emojiId != null ?
@@ -180,8 +183,14 @@ public class TrackCommand extends ListenerAdapter implements Listener {
                 items.append(formattedEmoji).append(" ")
                         .append(item.getAmount()).append("x ")
                         .append(item.getType().name()).append("\n");
+                itemCount++;
             }
         }
+        
+        if (itemCount >= maxItems) {
+            items.append("... y más items");
+        }
+        
         embed.addField("Inventario", items.length() > 0 ? items.toString() : "Vacío", false);
 
         // Armadura.
